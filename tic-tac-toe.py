@@ -16,6 +16,31 @@ def checked(i) :
             player = "X"
             button["bg"] = "lightgreen"
 
+def winner():
+      if list[0]["text"] == list[1]["text"] == list[2]["text"] !="    ":
+            win()
+      elif list[3]["text"] == list[4]["text"] == list[5]["text"] !="    ":
+            win()
+      elif list[6]["text"] == list[7]["text"] == list[8]["text"] !="    ":
+            win()
+      elif list[0]["text"] == list[3]["text"] == list[6]["text"] !="    ":
+            win()
+      elif list[1]["text"] == list[4]["text"] == list[7]["text"] !="    ":
+            win() 
+      elif list[2]["text"] == list[5]["text"] == list[8]["text"] !="    ":
+            win()
+      elif list[0]["text"] == list[4]["text"] == list[8]["text"] !="    ":
+            win()      
+      elif list[2]["text"] == list[4]["text"] == list[6]["text"] !="    ":
+            win()     
+def win():
+    if player == "X":
+        tkinter.messagebox.showinfo("","X is winner!")
+            quit()
+    else:
+        tkinter.messagebox.showinfo("","O is winner!")
+            quit()
+      
 window = Tk()
 player = "X"
 list= []
